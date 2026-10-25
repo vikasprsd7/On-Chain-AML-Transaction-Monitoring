@@ -5,8 +5,10 @@ tamper-evident hash-chain ledger check. **All data is synthetic and seeded (seed
 production system or real on-chain data.
 
 ## Why this project
-Public-chain analytics and AML monitoring are a core RegTech use case. This project shows (1) how known laundering
-patterns look in transaction data, (2) how far rules vs. ML get you, and (3) how a hash chain makes a ledger tamper-evident.
+Public-chain analytics and AML monitoring are a core RegTech use case. This project shows 
+- How known laundering patterns look in transaction data,
+- How far rules vs. ML get you,
+- How a hash chain makes a ledger tamper-evident.
 
 ## Data (generate_data.py)
 - 43,480 transactions, 3,000 wallets, 870 blocks, 90 days; 125 illicit wallets (4.17%).
@@ -45,11 +47,11 @@ because mule, origin and destination wallets look ordinary on their own.
 
 - Random Forest at 0.5: 14 of 31 illicit wallets caught, 44 false alarms. Threshold trade-off: 0.3 gives 90% recall with 128 false alarms; 0.7 gives 53% precision at 26% recall with 7 false alarms.
 - SMOTE did **not** improve ranking quality (Random Forest without SMOTE: test ROC-AUC 0.93), it only moved the operating point: recall 19% -> 45% while precision fell from 100% to 24%.
-- By role (Random Forest, test): intermediaries 3/3, structurers 4/4, collectors 1/2, mule-in 5/14, mule-out 1/6, destinations 0/2.
+- By role (Random Forest, test): Intermediaries 3/3, structurers 4/4, collectors 1/2, mule-in 5/14, mule-out 1/6, destinations 0/2.
 
-**Ledger integrity:** altering one transaction amount in block 100 was detected at block 100 (Merkle root mismatch); re-mining block 100 to hide it was detected at block 101 (broken previous-hash link).
+**Ledger integrity:** Altering one transaction amount in block 100 was detected at block 100 (Merkle root mismatch); re-mining block 100 to hide it was detected at block 101 (broken previous-hash link).
 
-## Limitations (read before citing any number)
+## Limitations 
 - Synthetic data with typologies I designed; features were built with those typologies in mind, so scores will be optimistic vs. real chains.
 - Small test set (31 illicit wallets) - precision/recall swing a lot with the split; no repeated-split confidence intervals.
 - Fixed 0.5 default threshold; thresholds in the table are shown on the test set for illustration only, not tuned.
