@@ -1,0 +1,12 @@
+{
+  "best_model": "Random Forest",
+  "no_smote": {
+    "model": "Random Forest",
+    "test_roc_auc": 0.93,
+    "test_pr_auc": 0.482,
+    "test_precision": 1.0,
+    "test_recall": 0.194
+  },
+  "n_test": 750,
+  "n_test_illicit": 31
+}

@@ -1,0 +1,8 @@
+{
+  "flagged": 43,
+  "caught": 40,
+  "total_illicit": 125,
+  "false_positives": 3,
+  "recall": 0.32,
+  "precision": 0.93
+}

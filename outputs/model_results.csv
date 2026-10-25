@@ -1,0 +1,4 @@
+model,cv_roc_auc,cv_pr_auc,test_roc_auc,test_pr_auc,test_precision,test_recall,tp,fp,fn,tn
+Logistic Regression,0.896,0.433,0.905,0.362,0.166,0.806,25,126,6,593
+Decision Tree,0.824,0.207,0.749,0.156,0.118,0.548,17,127,14,592
+Random Forest,0.905,0.468,0.91,0.369,0.241,0.452,14,44,17,675

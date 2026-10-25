@@ -1,0 +1,5 @@
+rule,flagged,seeded_targets,caught,false_positives,recall,precision
+Q1 structuring,13,14,13,0,0.929,1.0
+Q2 rapid pass-through,11,11,11,0,1.0,1.0
+Q3 fan-in/fan-out,6,4,4,2,1.0,0.667
+Q4 KYC gap,13,12,12,1,1.0,0.923

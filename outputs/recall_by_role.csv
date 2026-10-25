@@ -1,0 +1,7 @@
+role,n,caught,recall
+collector,2,1,0.5
+destination,2,0,0.0
+intermediary,3,3,1.0
+mule_in,14,5,0.357
+mule_out,6,1,0.167
+structurer,4,4,1.0

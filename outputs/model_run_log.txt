@@ -1,0 +1,34 @@
+train 2250 (94 illicit)  test 750 (31 illicit)
+              model  cv_roc_auc  cv_pr_auc  test_roc_auc  test_pr_auc  test_precision  test_recall  tp  fp  fn  tn
+Logistic Regression       0.896      0.433         0.905        0.362           0.166        0.806  25 126   6 593
+      Decision Tree       0.824      0.207         0.749        0.156           0.118        0.548  17 127  14 592
+      Random Forest       0.905      0.468         0.910        0.369           0.241        0.452  14  44  17 675
+
+Best model without SMOTE: {'model': 'Random Forest', 'test_roc_auc': 0.93, 'test_pr_auc': 0.482, 'test_precision': 1.0, 'test_recall': 0.194}
+
+Test-set recall by illicit wallet role ( Random Forest ):
+                n  caught  recall
+role                            
+collector      2       1   0.500
+destination    2       0   0.000
+intermediary   3       3   1.000
+mule_in       14       5   0.357
+mule_out       6       1   0.167
+structurer     4       4   1.000
+
+Threshold sensitivity:
+  threshold  precision  recall  false_alarms
+       0.3      0.179   0.903           128
+       0.5      0.241   0.452            44
+       0.7      0.533   0.258             7
+       0.9      1.000   0.032             0
+
+Top features:
+ nb_collector    0.159
+max_nb_burst    0.159
+max_out         0.096
+avg_out         0.078
+v_out           0.076
+log_vol         0.070
+max_nb_deg      0.039
+burst_48h       0.036

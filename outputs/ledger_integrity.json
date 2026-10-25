@@ -1,0 +1,12 @@
+{
+  "blocks": 870,
+  "tamper_block": 100,
+  "detect_naive": [
+    100,
+    "merkle root mismatch (transaction altered)"
+  ],
+  "detect_remined": [
+    101,
+    "broken prev_hash link"
+  ]
+}
